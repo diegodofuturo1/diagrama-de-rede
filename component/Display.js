@@ -1,8 +1,12 @@
+import service from '../database/service.js';
 import Board from './Board.js'
 
 function Display(props) {
+
+    const tasks = service.task.list()
+
     return <div style={{ display: 'flex' }}>
-        {props.boards.map(board => <Board {...board} />)}
+        {tasks.map(task => <Board {...task} />)}
     </div>
 }
 

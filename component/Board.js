@@ -2,7 +2,7 @@ function Board(props) {
 
     const style = {
         main: {
-            width: '100px',
+            width: '200px',
             height: '100px',
             margin: '0px 20px',
             padding: '0px',
@@ -26,24 +26,25 @@ function Board(props) {
             border: '1px solid black',
             margin: '0px',
             padding: '0px',
-            width: '25px',
-            textAlign: 'center'
+            width: '50ox',
+            textAlign: 'center',
             
         },
         divcenter: {
             border: '1px solid black',
             margin: '0px',
             padding: '0px',
-            width: '50px'
+            width: '100px',
+            textAlign: 'center',
         }
     }
 
 
     return <div style={style.main}>
         <div style={style.row}>
-            <div className="s1" style={style.div}>{props.initial}</div>
-            <div className="s2" style={style.divcenter}></div>
-            <div className="s3" style={style.div}>{props.final}</div>
+            <div style={style.div}>{props.initial}</div>
+            <div style={style.divcenter}></div>
+            <div style={style.div}>{props.final}</div>
         </div>
         
         <div style={style.content}>
@@ -51,9 +52,9 @@ function Board(props) {
         </div>
 
         <div style={style.row}>
-            <div className="s4" style={style.div}>{props.id}</div>
-            <div className="s5" style={style.divcenter}>{props.resource}</div>
-            <div className="s6" style={style.div}>{props.days}</div>
+            <div style={style.div}>{props.id}</div>
+            <div style={style.divcenter}>{props.resource[0]}</div>
+            <div style={style.div}>{props.days}</div>
         </div>
     </div>
 }
